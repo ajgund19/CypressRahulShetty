@@ -1,0 +1,40 @@
+# Terminal Comand#
+- mkdir CypressAutomation
+- cd CypressAutomation
+- npm -i init
+
+open "CypressAutomation" folder
+- npm install cypress
+- npx cypress open
+
+* In Cypress folder create 
+  - integration/Example/Test1.js
+
+#Class known as Spec in Cypress
+
+# To run test i'e spec need to give path in cypress.config.js as
+  - specPattern: 'cypress/intigretion/examples/*.js'
+
+# describe- is test suit
+  it- is a test case
+
+  describe('My first test', function()
+   {
+ 
+it('xyz' , function()
+     {
+         expect(true).to.equal(false)
+      })
+
+    }
+
+# fixture folder- used to store test data file like exel
+# support flder- used to write reuseable commond/method
+#cypress support CSS selector only
+# for auto-suggestion add this in main file and save- ///<reference types="Cypress" />
+# we can what happen on every step with screenshot & error message in cypress
+#cypress automatically handle Alert and Popups
+#cypress have capability to listen the browser events.
+
+# for Xpath add in commond.js- require('cypress-xpath');
+

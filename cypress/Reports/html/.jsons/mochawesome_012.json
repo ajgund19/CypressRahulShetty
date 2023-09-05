@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-09-05T10:52:13.256Z",
+    "end": "2023-09-05T10:52:32.779Z",
+    "duration": 19523,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8bd582bb-24de-4ba0-be5a-8d96a165e13a",
+      "title": "",
+      "fullFile": "cypress\\integration\\revision\\Webtable.js",
+      "file": "cypress\\integration\\revision\\Webtable.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cb84d54f-32e0-4fc4-929b-57f055388b9d",
+          "title": "",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "",
+              "fullTitle": " ",
+              "timedOut": null,
+              "duration": 12034,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\integration\\\\revision\\\\Webtable.js\"\n}",
+              "code": "cy.visit('https://www.dezlearn.com/webtable-example/');\ncy.get('tr td:nth-child(1)').each(function ($el, index, $list) {\n  var Name = $el.text();\n  if (Name.includes('Mayur Deshmukh')) {\n    cy.get('tr td:nth-child(1)').eq(index).next().then(function (Mail) {\n      var MailID = Mail.text();\n      expect(MailID).to.equal('mayur@dezlearn.com');\n    });\n  }\n});",
+              "err": {},
+              "uuid": "0ec069c7-4730-435b-8b18-4c6f14901ab0",
+              "parentUUID": "cb84d54f-32e0-4fc4-929b-57f055388b9d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0ec069c7-4730-435b-8b18-4c6f14901ab0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12034,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

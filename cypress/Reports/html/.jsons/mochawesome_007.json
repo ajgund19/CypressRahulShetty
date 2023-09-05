@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-09-05T10:50:15.099Z",
+    "end": "2023-09-05T10:50:34.087Z",
+    "duration": 18988,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6fb3c90d-c340-4244-ab9a-7d6787557ad6",
+      "title": "",
+      "fullFile": "cypress\\integration\\revision\\TEst1_Copy.js",
+      "file": "cypress\\integration\\revision\\TEst1_Copy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fda9eaa9-4d7d-4a7d-9171-39e493e88ca6",
+          "title": "My ist test suit",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "First test case",
+              "fullTitle": "My ist test suit First test case",
+              "timedOut": null,
+              "duration": 13598,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\integration\\\\revision\\\\TEst1_Copy.js\"\n}",
+              "code": "cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/');\ncy.get('.search-keyword').type('ca');\ncy.wait(4000);\ncy.get('.product:visible').should('have.length', 4).then(function () {\n  console.log('Ajit is Practicing');\n});\ncy.get('.products').as('MultiP');\ncy.get('@MultiP').find('.product').eq(2).contains('ADD TO CART').click();\ncy.get('@MultiP').find('.product').each(function ($el, index, $list) {\n  var VegName = $el.find('.product-name').text();\n  if (VegName === 'Carrot - 1 Kg') {\n    // wrap this element so we can\n    // use cypress commands on it\n    cy.wrap($el).contains('ADD TO CART').click();\n  }\n});\ncy.get('.brand').should('contain', 'GREENKART').then(function (logotext) {\n  cy.log(logotext.text());\n});",
+              "err": {},
+              "uuid": "492bfd2a-56f8-411d-a7c6-4588af9e2d75",
+              "parentUUID": "fda9eaa9-4d7d-4a7d-9171-39e493e88ca6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "492bfd2a-56f8-411d-a7c6-4588af9e2d75"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13598,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

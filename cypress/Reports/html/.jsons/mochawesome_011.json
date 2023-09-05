@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-09-05T10:51:55.183Z",
+    "end": "2023-09-05T10:52:08.173Z",
+    "duration": 12990,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "20b4fb8f-378f-471d-affd-a142abda08ef",
+      "title": "",
+      "fullFile": "cypress\\integration\\revision\\Test4.Copy.js",
+      "file": "cypress\\integration\\revision\\Test4.Copy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dcd2785f-51e3-4eb2-8dfb-43a8b2fd15c2",
+          "title": "dropdown",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "2nd time",
+              "fullTitle": "dropdown 2nd time",
+              "timedOut": null,
+              "duration": 9440,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\integration\\\\revision\\\\Test4.Copy.js\"\n}",
+              "code": "cy.visit('https://rahulshettyacademy.com/AutomationPractice/');\ncy.get('select').select('option1').should('have.value', 'option1');\ncy.get('select').select('option2');\ncy.get('#autocomplete').type('pak');\ncy.get('.ui-menu-item-wrapper').each(function ($el, index, $list) {\n  if ($el.text() === 'Pakistan') {\n    // wrap this element so we can\n    // use cypress commands on it\n    cy.wrap($el).click();\n  }\n});\ncy.get('#autocomplete').should('have.value', 'Pakistan');",
+              "err": {},
+              "uuid": "45e520fd-4c47-4984-91a2-05d4af1984a7",
+              "parentUUID": "dcd2785f-51e3-4eb2-8dfb-43a8b2fd15c2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "45e520fd-4c47-4984-91a2-05d4af1984a7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9440,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

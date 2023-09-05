@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-09-05T10:51:04.735Z",
+    "end": "2023-09-05T10:51:19.510Z",
+    "duration": 14775,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "db886fe5-eb35-4e02-bbec-cb17e56f240e",
+      "title": "",
+      "fullFile": "cypress\\integration\\revision\\Test2_copy.js",
+      "file": "cypress\\integration\\revision\\Test2_copy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "79080750-1ae1-4f81-8f40-c513d2592373",
+          "title": "practice suit",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "starting tesxt",
+              "fullTitle": "practice suit starting tesxt",
+              "timedOut": null,
+              "duration": 9539,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\integration\\\\revision\\\\Test2_copy.js\"\n}",
+              "code": "cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/');\ncy.get('[class=\"search-keyword\"]').type('ca');\ncy.get('.products').as('productlocator');\ncy.get('@productlocator').find('.product').should('have.length', 4);\ncy.get('@productlocator').find('.product').each(function ($el, index, $list) {\n  var productname = $el.find('.product-name').text();\n  if (productname === 'Cashews - 1 Kg') {\n    cy.wrap($el).contains('ADD TO CART').click();\n  }\n});\ncy.get('.cart-icon').click();\ncy.contains('PROCEED TO CHECKOUT').click();\ncy.get('.product-name').should('contain', ' 1 Kg');\ncy.contains('Place Order').click();",
+              "err": {},
+              "uuid": "de9594a3-1d46-4996-abce-d709483bffdf",
+              "parentUUID": "79080750-1ae1-4f81-8f40-c513d2592373",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "de9594a3-1d46-4996-abce-d709483bffdf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9539,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

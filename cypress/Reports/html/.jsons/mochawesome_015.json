@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-09-05T10:54:40.621Z",
+    "end": "2023-09-05T10:55:49.517Z",
+    "duration": 68896,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6b50ed8b-0371-4032-a928-626d72a5d718",
+      "title": "",
+      "fullFile": "cypress\\integration\\revision\\Test98_copy.js",
+      "file": "cypress\\integration\\revision\\Test98_copy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c57b7b95-88e2-49bc-b5aa-0eef87eabe44",
+          "title": "new Tabp",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "new tab in same window",
+              "fullTitle": "new Tabp new tab in same window",
+              "timedOut": null,
+              "duration": 24794,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\integration\\\\revision\\\\Test98_copy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\Test98_copy.js\\\\new Tabp -- new tab in same window (failed) (1).png\"\n      ],\n      [\n        \"\\\\Test98_copy.js\\\\new Tabp -- new tab in same window (failed) (attempt 2) (1).png\"\n      ],\n      [\n        \"\\\\Test98_copy.js\\\\new Tabp -- new tab in same window (failed) (attempt 3) (1).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit('https://rahulshettyacademy.com/AutomationPractice/');\ncy.get('#opentab').invoke('removeAttr', 'target').click();\ncy.url().should('include', 'qaclickacademy');\ncy.wait(4000);\ncy.go('back');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '' to include 'qaclickacademy'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '' to include 'qaclickacademy'\n    at Context.eval (cypress/integration/revision/Test98_copy.js:8:14)",
+                "diff": null
+              },
+              "uuid": "10258867-0e0f-45c9-979a-663302bba792",
+              "parentUUID": "c57b7b95-88e2-49bc-b5aa-0eef87eabe44",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "10258867-0e0f-45c9-979a-663302bba792"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 24794,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
